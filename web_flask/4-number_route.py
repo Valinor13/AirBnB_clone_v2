@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ This module is the flask backend to communicate with the web site"""
 
-from flask import Flask
+from flask import Flask, abort
 
 app = Flask(__name__)
 
@@ -37,7 +37,7 @@ def number(n):
     try:
         return "{} is a number".format(int(n))
     except:
-        pass
+        abort(404)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
