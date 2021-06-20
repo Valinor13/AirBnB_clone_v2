@@ -8,6 +8,12 @@ from models.state import State
 app = Flask(__name__)
 
 
+@app.teardown_appcontext
+def remove():
+    """ calls close method to update storage with flask """
+    storage.close()
+
+
 @app.route("/states_list", strict_slashes=False)
 def states_list():
     """ States list displays in html the state and associated id in the db """
