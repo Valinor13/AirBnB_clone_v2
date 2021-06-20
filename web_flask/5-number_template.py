@@ -35,7 +35,8 @@ def python(text="is cool"):
 def number(n):
     """ display n only if integer """
     try:
-        return "{} is a number".format(int(n))
+        int(n)
+        return render_template("template/5-number.html", number=n)
     except:
         abort(404)
 
