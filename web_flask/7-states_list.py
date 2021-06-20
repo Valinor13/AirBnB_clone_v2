@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def remove():
+def remove(response):
     """ calls close method to update storage with flask """
     storage.close()
 
