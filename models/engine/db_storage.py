@@ -35,6 +35,10 @@ class DBStorage:
         if os.getenv('HBNB_ENV') == 'test':
             Base.metadata.drop_all(bind=self.__engine)
 
+    def close(self):
+        """This method calls remove"""
+        self.__session.close()
+
     def all(self, cls=None):
         cls_list = [State, City, Place, Review, User, Amenity]
         tmp_dic = {}
