@@ -54,8 +54,7 @@ def number_template(n):
 def number_odd_or_even(n):
     """ displays n and odd or even status only if int """
     try:
-        int(n)
-        if n % 2 == 0:
+        if int(n) % 2 == 0:
             status = "even"
         else:
             status = "odd"
@@ -64,7 +63,6 @@ def number_odd_or_even(n):
                                status=status)
     except:
         abort(404)
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
