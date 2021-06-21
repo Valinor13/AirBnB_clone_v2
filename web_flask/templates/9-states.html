@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<HTML lang="en">
+	<HEAD>
+		<TITLE>HBNB</TITLE>
+	</HEAD>
+	<BODY>
+	{% if zig == 3 %}
+		<H1>State: {{ states[0][0] }}</H1>
+		<H3>Cities:</H3>
+		<UL>
+		{% for tup in states[0][2] %}
+			<LI>{{tup[1]}}: <B>{{tup[0]}}</B></LI>
+		{% endfor %}
+		</UL>
+	{% elif zig == 2 %}
+		<H1>States</H1>
+		<UL>
+		{% for tup in states %}
+			<LI>{{tup[1]}}: <B>{{tup[0]}}</B></LI>
+		{% endfor %}
+		</UL>
+	{% else %}
+		<H1>Not found!</H1>
+	{% endif %}
+	</BODY>
+</HTML>
