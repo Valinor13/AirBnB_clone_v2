@@ -8,11 +8,11 @@
 		<UL>
 		{% for tup in states %}
 			<LI>{{tup[1]}}: <B>{{tup[0]}}</B></LI>
-			<UL>
-			{% for nested_tup in tup[2] %}
-				<LI>{{nested_tup[1]}}: <B>{{nested_tup[0]}}</B></LI>
-			{% endfor %}
-			</UL>
+				<UL>
+				{% for nested_tup in tup[2] %}
+					<LI>{{nested_tup[1]}}: <B>{{nested_tup[0]}}</B></LI>
+				{% endfor %}
+				</UL>
 		{% endfor %}
 		</UL>
 	</BODY>
