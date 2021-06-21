@@ -7,12 +7,13 @@
 		<H1>States</H1>
 		<UL>
 		{% for tup in states %}
-			<LI>{{tup[1]}}: <B>{{tup[0]}}</B></LI>
+			<LI>{{tup[1]}}: <B>{{tup[0]}}</B>
 				<UL>
 				{% for nested_tup in tup[2] %}
 					<LI>{{nested_tup[1]}}: <B>{{nested_tup[0]}}</B></LI>
 				{% endfor %}
 				</UL>
+			</LI>
 		{% endfor %}
 		</UL>
 	</BODY>
